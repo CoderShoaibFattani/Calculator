@@ -31,7 +31,7 @@ function updateDecimal(val) {
   }
 }
 
-function clearDsiplay() {
+function clearDisplay() {
   expression = "";
   display.innerText = "";
 }

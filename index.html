@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculater</title>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
+  </head>
 
-<body>
-    <div>
-        <div id="display">
-        </div>
-        <div id="buttons">
-            <button class="btn" onclick="clearDsiplay()">C</button>
-            <button class="btn" onclick="updateExpression('/')">/</button>
-            <button class="btn" onclick="clearOneDigit()">del</button>
-            <button class="btn" onclick="updateExpression('*')">x</button>
-            <button class="btn" onclick="updateExpression('-')">-</button>
-            <button class="btn" onclick="updateExpression('+')"">+</button>
-            <button class="btn" onclick="updateExpression('7')">7</button>
-            <button class="btn" onclick="updateExpression('8')">8</button>
-            <button class="btn" onclick="updateExpression('9')">9</button>
-            <button class="btn" onclick="updateExpression('4')">4</button>
-            <button class="btn" onclick="updateExpression('5')">5</button>
-            <button class="btn" onclick="updateExpression('6')">6</button>
-            <button class="btn" onclick="updateExpression('1')">1</button>
-            <button class="btn" onclick="updateExpression('2')">2</button>
-            <button class="btn" onclick="updateExpression('3')">3</button>
-            <button class="btn" onclick="updateDecimal('.')" id="decimal">.</button>
-            <button class="btn" onclick="updateExpression('0')">0</button>
-            <button class="btn" onclick="calculate()">=</button>
-        </div>
+  <body>
+    <div class="calculator-container">
+      <div id="display" class="display"></div>
+      <div id="buttons" class="buttons">
+        <button class="btn btn-clear" onclick="clearDisplay()">C</button>
+        <button class="btn btn-operator" onclick="updateExpression('/')">
+          /
+        </button>
+        <button class="btn btn-clear" onclick="clearOneDigit()">del</button>
+        <button class="btn btn-operator" onclick="updateExpression('*')">
+          x
+        </button>
+        <button class="btn btn-operator" onclick="updateExpression('-')">
+          -
+        </button>
+        <button class="btn btn-operator" onclick="updateExpression('+')">
+          +
+        </button>
+        <button class="btn" onclick="updateExpression('7')">7</button>
+        <button class="btn" onclick="updateExpression('8')">8</button>
+        <button class="btn" onclick="updateExpression('9')">9</button>
+        <button class="btn" onclick="updateExpression('4')">4</button>
+        <button class="btn" onclick="updateExpression('5')">5</button>
+        <button class="btn" onclick="updateExpression('6')">6</button>
+        <button class="btn" onclick="updateExpression('1')">1</button>
+        <button class="btn" onclick="updateExpression('2')">2</button>
+        <button class="btn" onclick="updateExpression('3')">3</button>
+        <button class="btn" onclick="updateDecimal('.')">.</button>
+        <button class="btn" onclick="updateExpression('0')">0</button>
+        <button class="btn btn-equal" onclick="calculate()">=</button>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

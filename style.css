@@ -1,29 +1,109 @@
-#display, #buttons {
-    border: 1px solid black;
-    max-width: 200px;
-    width: 200px;
-    box-sizing: border-box;
-    margin: 0 auto;
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #1e3c72;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #fff;
 }
 
-#display {
-    height: 30px;
-    text-align: right;
-    padding: 5px 10px;
-    border-bottom: none;
-    color: black;
-}   
+.calculator-container {
+    background: black;
+    color: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* max-width: 30vw; */
+    width: 50%;
+    box-sizing: border-box;
+    /* height: 90vh; */
+}
 
-#buttons {
-   margin: 0 auto;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
+.display {
+    background: white;
+    color: black;
+    font-size: 3rem;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: right;
+    margin-bottom: 30px;
+    min-height: 60px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1.5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .btn {
-    max-width: 50px;
-    width: 30px;
-    margin: 5px 10px;
-    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    background: white;
+    color: black;
+    transform: translateY(2px);
+}
+
+.btn-operator {
+    background: #ff5722;
+}
+
+.btn-operator:hover {
+    background: #ff7043;
+}
+
+.btn-equal {
+    background: #4caf50;
+    /* grid-column: span 3; */
+}
+
+.btn-equal:hover {
+    background: #66bb6a;
+}
+
+.btn-clear {
+    background: #f44336;
+}
+
+.btn-clear:hover {
+    background: #ef5350;
+}
+
+
+/* Responsive design */
+/* small screen sizes */
+
+@media screen and (max-width: 480px) {
+    .calculator-container {
+        width: 80%;
+    }
+
+    .display {
+        font-size: 1.5rem;
+    }
+
+    .buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
