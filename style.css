@@ -8,6 +8,7 @@ body {
     background: #1e3c72;
     background: linear-gradient(to right, #1e3c72, #2a5298);
     color: #fff;
+    /* padding: 40px; */
 }
 
 .calculator-container {
@@ -19,7 +20,7 @@ body {
     /* max-width: 30vw; */
     width: 50%;
     box-sizing: border-box;
-    /* height: 90vh; */
+    margin: 30px auto;
 }
 
 .display {
